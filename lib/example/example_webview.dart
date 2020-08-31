@@ -129,49 +129,49 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Expanded(
-                    flex: 1,
-                    child: EasyWebView(
-                        src: src,
-                        isHtml: _isHtml,
-                        isMarkdown: _isMarkdown,
-                        convertToWidets: _useWidgets,
-                        key: key
-                      // width: 100,
-                      // height: 100,
-                    )),
-                Expanded(
-                    flex: 1,
-                    child: EasyWebView(
-                        src: src2,
-                        isHtml: _isHtml,
-                        isMarkdown: _isMarkdown,
-                        convertToWidets: _useWidgets,
-                        key: key2
-                      // width: 100,
-                      // height: 100,
-                    )),
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Expanded(
-                  flex: 3,
-                  child: Container(),
-                ),
-                Expanded(
-                    flex: 1,
-                    child: Container(
-                        width: (open) ? 500 : 0,
-                        child: EasyWebView(
-                            src: src3,
-                            isHtml: _isHtml,
-                            isMarkdown: _isMarkdown,
-                            convertToWidets: _useWidgets,
-                            key: key3
-                          // width: 100,
-                          // height: 100,
-                        ))),
+            //     Expanded(
+            //         flex: 1,
+            //         child: EasyWebView(
+            //             src: src,
+            //             isHtml: _isHtml,
+            //             isMarkdown: _isMarkdown,
+            //             convertToWidets: _useWidgets,
+            //             key: key
+            //           // width: 100,
+            //           // height: 100,
+            //         )),
+            //     Expanded(
+            //         flex: 1,
+            //         child: EasyWebView(
+            //             src: src2,
+            //             isHtml: _isHtml,
+            //             isMarkdown: _isMarkdown,
+            //             convertToWidets: _useWidgets,
+            //             key: key2
+            //           // width: 100,
+            //           // height: 100,
+            //         )),
+            //   ],
+            // ),
+            // Column(
+            //   children: <Widget>[
+            //     Expanded(
+            //       flex: 3,
+            //       child: Container(),
+            //     ),
+            //     Expanded(
+            //         flex: 1,
+            //         child: Container(
+            //             width: (open) ? 500 : 0,
+            //             child: EasyWebView(
+            //                 src: src3,
+            //                 isHtml: _isHtml,
+            //                 isMarkdown: _isMarkdown,
+            //                 convertToWidets: _useWidgets,
+            //                 key: key3
+            //               // width: 100,
+            //               // height: 100,
+            //             ))),
               ],
             )
           ],

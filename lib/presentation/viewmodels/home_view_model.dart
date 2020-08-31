@@ -1,7 +1,11 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:git_viewer/core/viewmodels/base_view_model.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
 import 'package:git_viewer/presentation/dialog_manager/home_page_dialog_manager.dart';
+import 'package:git_viewer/presentation/pages/home_page.dart';
+import 'package:git_viewer/presentation/views/home_view.dart';
 
 import '../../injection_container.dart';
 
@@ -40,7 +44,15 @@ class HomeViewModel extends BaseViewModel{
     setBusy(false);
   }
 
+  void delProject(int idx) 
+{
+  _projectList.removeAt(idx);   
+   gitRepository.saveProjectEntityList(_projectList);    
+  notifyListeners();
+          
+}
 
-  List<ProjectEntity> get projectList => _projectList;
+  List<ProjectEntity> get projectList =>  _projectList;
 
+ 
 }

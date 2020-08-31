@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Router;
 import 'package:git_viewer/router.dart';
 
 import 'injection_container.dart' as di;
