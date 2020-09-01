@@ -1,22 +1,20 @@
 
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:git_viewer/presentation/viewmodels/home_view_model.dart';
-import 'package:provider/provider.dart';
+
+import 'package:stacked/stacked.dart';
 
 import '../../router.dart';
-import 'package:git_viewer/core/views/base_view.dart';
 
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BaseView<HomeViewModel>(
-      onModelReady: (model) => model.getProjectList(),
-      builder: (context, model, child) {
-        return Scaffold(
+    return ViewModelBuilder.reactive(
+      builder:(
+        context,model,child)=>Scaffold(
           floatingActionButton: FloatingActionButton(
               onPressed: (){
-                Provider.of<HomeViewModel>(context, listen: false).addProject();
+                model.addProject();
               },
               tooltip: 'Add Project',
               child: Icon(Icons.add)
@@ -46,8 +44,8 @@ class HomeView extends StatelessWidget {
                       }
                     )
                    )
-                  );
-                }
+                  ),
+                viewModelBuilder: ()=>HomeViewModel(),
               );
             }
           

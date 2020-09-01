@@ -40,8 +40,6 @@ class BranchViewModel extends BaseViewModel{
     _selectedBranch =  branchEntity;
     notifyListeners();
   }
-
-
 }
 
 

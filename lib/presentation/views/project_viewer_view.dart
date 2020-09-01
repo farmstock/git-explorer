@@ -7,6 +7,7 @@ import 'package:git_viewer/presentation/views/file_explorer_view.dart';
 import 'package:git_viewer/presentation/views/file_viewer_view.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:git_viewer/core/views/base_view.dart';
 
