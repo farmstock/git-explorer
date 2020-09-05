@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/core/util/ui_util.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
-import 'package:git_viewer/presentation/viewmodels/project_viewer_viewmodels.dart';
-import 'package:git_viewer/presentation/views/file_explorer_view.dart';
-import 'package:git_viewer/presentation/views/file_viewer_view.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view.dart';
+import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view.dart';
+import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:provider/provider.dart';
-import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:git_viewer/core/views/base_view.dart';
 

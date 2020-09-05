@@ -5,7 +5,7 @@ import 'package:git_viewer/data/datasources/git_data_source.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
 
-import '../../injection_container.dart';
+import '../../../injection_container.dart';
 import 'package:git_viewer/core/viewmodels/base_view_model.dart';
 
 
