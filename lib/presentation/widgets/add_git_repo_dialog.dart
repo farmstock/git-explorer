@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:git_viewer/presentation/dialog_manager/home_page_dialog_manager.dart';
+import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart';
 
 class AddGitRepoDialog extends StatefulWidget {
   final HomePageDialogService dialogService;

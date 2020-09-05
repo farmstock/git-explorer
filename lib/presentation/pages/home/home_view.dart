@@ -1,10 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:git_viewer/presentation/pages/home/home_view_model.dart';
-
-
 import 'package:stacked/stacked.dart';
-
 import '../../../router.dart';
 
 class HomeView extends StatelessWidget {

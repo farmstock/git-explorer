@@ -1,11 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:git_viewer/core/views/base_view.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
+import 'package:git_viewer/presentation/pages/base/base_view.dart';
+import 'package:git_viewer/presentation/pages/branch_view_selector/branch_selector_view.dart';
 import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view_model.dart';
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
-
-import 'package:git_viewer/presentation/views/branch_selector_view.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
 
