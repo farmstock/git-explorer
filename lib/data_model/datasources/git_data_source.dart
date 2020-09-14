@@ -1,8 +1,7 @@
 
 import 'dart:convert';
-
 import 'package:git_viewer/core/error/exceptions.dart';
-import 'package:git_viewer/data/models/git_models.dart';
+import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 

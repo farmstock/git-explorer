@@ -1,17 +1,15 @@
 
 import 'dart:convert';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/core/error/exceptions.dart';
 import 'package:git_viewer/core/error/failures.dart';
-import 'package:git_viewer/data/datasources/git_data_source.dart';
-import 'package:git_viewer/data/datasources/git_local_data_source.dart';
-import 'package:git_viewer/data/models/git_models.dart';
+import 'package:git_viewer/data_model/datasources/git_data_source.dart';
+import 'package:git_viewer/data_model/datasources/git_local_data_source.dart';
+import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
-import 'package:git_viewer/core/util/local_storage_util.dart';
-
+import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 
 // Cache constants
 

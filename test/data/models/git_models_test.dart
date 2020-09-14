@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:flutter_test/flutter_test.dart';
-import 'package:git_viewer/data/models/git_models.dart';
-
+import 'package:git_viewer/data_model/models/git_models.dart';
 import '../../fixtures/fixture_reader.dart';
 
 

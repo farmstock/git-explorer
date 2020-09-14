@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:git_viewer/core/util/local_storage_util.dart';
+import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:json_annotation/json_annotation.dart';
 

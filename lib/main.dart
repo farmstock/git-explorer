@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Router;
+
 import 'package:git_viewer/router.dart';
 
 import 'injection_container.dart' as di;
@@ -7,6 +8,7 @@ import 'injection_container.dart' as di;
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
+  //setupLocator();
   runApp(MyApp());
 }
 

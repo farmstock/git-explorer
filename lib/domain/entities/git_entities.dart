@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:git_viewer/data/models/git_models.dart';
+import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'git_entities.g.dart';

@@ -1,5 +1,4 @@
-
-import 'package:git_viewer/core/util/local_storage_util.dart';
+import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 
 abstract class GitLocalDataSource {
     String getGitContent(String contentUrl);

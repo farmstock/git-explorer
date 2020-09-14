@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:git_viewer/presentation/pages/home_page.dart';
-import 'package:git_viewer/presentation/pages/project_viewer_page.dart';
+import 'package:git_viewer/presentation/pages/home/home_page.dart';
+
+import 'presentation/pages/project_viewer/project_viewer_page.dart';
+
+
 
 const String HomeRoute = "/";
 const String ViewerRoute = "/viewer";
