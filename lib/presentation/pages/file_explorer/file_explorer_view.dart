@@ -85,7 +85,6 @@ class FileExplorer extends StatelessWidget {
             folderListWidget(model.busy)
           ],
         );
-
       },
 
     );
