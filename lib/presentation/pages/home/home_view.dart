@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:git_viewer/presentation/pages/home/home_view_model.dart';
 import 'package:stacked/stacked.dart';
-import '../../../router.dart';
+
 
 class HomeView extends StatelessWidget {
   @override
@@ -28,8 +28,7 @@ class HomeView extends StatelessWidget {
                           title: Text(projectEntity.projectName),
                           subtitle: Text(projectEntity.userName),
                           onTap: () {
-                            Navigator.pushNamed(
-                                context, ViewerRoute, arguments: projectEntity);
+                            model.navigateToViewRouter(projectEntity);
                           },
                            trailing: RaisedButton(
                              onPressed: (){model.delProject(idx);},

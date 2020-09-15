@@ -8,6 +8,7 @@ import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_view
 import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart';
 import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 import 'package:http/http.dart' as http;
+import 'package:stacked_services/stacked_services.dart';
 import 'data_model/repositories/git_repository_impl.dart';
 import 'domain/repositories/git_repository.dart';
 
@@ -51,4 +52,7 @@ Future<void> init() async {
 
   //! External
   sl.registerLazySingleton(() => http.Client());
+
+  sl.registerLazySingleton(() => NavigationService());
+
 }

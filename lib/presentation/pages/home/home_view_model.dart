@@ -1,13 +1,19 @@
+import 'package:git_viewer/app/locator.dart';
+import 'package:git_viewer/app/router.gr.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
 import 'package:git_viewer/presentation/pages/base/base_view_model.dart';
 import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart';
+import 'package:stacked_services/stacked_services.dart';
 import '../../../injection_container.dart';
 
 class HomeViewModel extends BaseViewModel{
 
   final HomePageDialogService _dialogService = sl<HomePageDialogService>();
   GitRepository gitRepository = sl<GitRepository>();
+  final NavigationService _navigationService = 
+  locator<NavigationService>();
+  
 
   List<ProjectEntity> _projectList = [];
 
@@ -49,6 +55,13 @@ class HomeViewModel extends BaseViewModel{
 
   List<ProjectEntity> get projectList =>  _projectList;
 
- 
+ Future<void> navigateToViewRouter( ProjectEntity projectEntity) async {
+   //print(projectEntity.projectName+''+projectEntity.userName);
+   ProjectViewerPageArguments _projPageArg= new ProjectViewerPageArguments(projectEntity: projectEntity);
+   await _navigationService.navigateTo(
+     Routes.projectViewerPage,arguments:_projPageArg
+    );
+    notifyListeners();
+ }
  
 }

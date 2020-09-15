@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart' hide Router;
-
-import 'package:git_viewer/router.dart';
-
+import 'package:git_viewer/app/router.gr.dart';
+import 'package:git_viewer/injection_container.dart';
+import 'package:stacked_services/stacked_services.dart';
 import 'injection_container.dart' as di;
-
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      onGenerateRoute: Router.generateRoute,
-      initialRoute: initialRoute,
+      onGenerateRoute: Router().onGenerateRoute,
+      navigatorKey: sl<NavigationService>().navigatorKey,
     );
   }
 }
