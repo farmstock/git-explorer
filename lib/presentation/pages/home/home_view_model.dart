@@ -10,7 +10,7 @@ import '../../../injection_container.dart';
 class HomeViewModel extends BaseViewModel{
 
   final HomePageDialogService _dialogService = sl<HomePageDialogService>();
-  GitRepository gitRepository = sl<GitRepository>();
+  GitRepository gitRepository = locator<GitRepository>();
   final NavigationService _navigationService = 
   locator<NavigationService>();
   
