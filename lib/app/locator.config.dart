@@ -30,9 +30,9 @@ Future<GetIt> $initGetIt(
 }) async {
   //final thirdPartyServicesModule = _$ThirdPartyServicesModule();
   final gh = GetItHelper(get, environment, environmentFilter);
-  var instance = await LocalStorageUtil.getInstance();
+ // var instance = await LocalStorageUtil.getInstance();
  // locator.registerLazySingleton<LocalStorageUtil>(instance);
- gh.lazySingleton<LocalStorageUtil>(() => instance );
+// gh.lazySingleton<LocalStorageUtil>(() => instance );
 
   // ViewModels
   gh.lazySingleton(() => BranchViewModel());

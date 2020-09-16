@@ -7,6 +7,7 @@ import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view.d
 import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view.dart';
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:provider/provider.dart';
+import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -16,11 +17,19 @@ class ProjectViewerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<BranchViewModel>(
-        onModelReady: (model) => model.fetchBranches(projectEntity),
-        builder: (context, model, child) {
-          return (model.busy)? Container(): _ProjectViewer(model.selectedBranch);
-      });
+    return ViewModelBuilder.reactive(
+      onModelReady:(model)=>model.fetchBranches(projectEntity) ,
+      builder: (context,model,child)=>Scaffold(
+        body: (model.busy)? Container():
+         _ProjectViewer(model.selectedBranch),
+      ),
+      viewModelBuilder: ()=>BranchViewModel(),
+      );
+    // return BaseView<BranchViewModel>(
+    //     onModelReady: (model) => model.fetchBranches(projectEntity),
+    //     builder: (context, model, child) {
+    //       return (model.busy)? Container(): _ProjectViewer(model.selectedBranch);
+    //   });
   }
 }
 

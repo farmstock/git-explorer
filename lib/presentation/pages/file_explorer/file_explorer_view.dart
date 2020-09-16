@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
@@ -86,10 +87,7 @@ class FileExplorer extends StatelessWidget {
           ],
         );
       },
-
     );
-
-
   }
 
   Widget row(bool isBusy) {
