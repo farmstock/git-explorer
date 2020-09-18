@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:git_viewer/data_model/datasources/git_data_source.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
@@ -58,7 +59,7 @@ class ProjectViewerViewModel extends BaseViewModel{
     _nodesInTab = [];
   }
 
-  void addNodeInTab(TreeNodeEntity treeNodeEntity){
+  void addNodeInTab(TreeNodeEntity treeNodeEntity, BuildContext context){
     if(!_nodesInTab.contains(treeNodeEntity))
       _nodesInTab.add(treeNodeEntity);
     _selectedFileNode = treeNodeEntity;

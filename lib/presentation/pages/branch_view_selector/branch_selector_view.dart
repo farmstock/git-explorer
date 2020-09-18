@@ -13,7 +13,6 @@ class BranchSelectorView extends StatelessWidget{
       if(model.branchList!=null)
         return dropDown(model.branchList, model.selectedBranch);
       return Container();
-
   }
 
   Widget dropDown(List<BranchEntity> branchList, BranchEntity selectedBranch){
@@ -33,6 +32,4 @@ class BranchSelectorView extends StatelessWidget{
         }
     );
   }
-
-
 }

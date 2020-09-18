@@ -68,7 +68,7 @@ class _ProjectViewer extends StatelessWidget {
             ),
           );
         }
-    );
+    ); 
   }
 
   Widget get _topBarWidget{

@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
 import 'package:git_viewer/presentation/pages/branch_view_selector/branch_selector_view.dart';
@@ -67,8 +66,7 @@ class FileExplorer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 if(nodeEntity.isLeafNode) {
-                  Provider.of<ProjectViewerViewModel>(
-                      context, listen: false).addNodeInTab(nodeEntity);
+                 locator<ProjectViewerViewModel>().addNodeInTab(nodeEntity,context);
                   return;
                 }
                 if (!(model.busy)) {

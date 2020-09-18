@@ -35,8 +35,7 @@ class HomeView extends StatelessWidget {
                              color: Colors.green,
                              child: Text("Delete"),
                            ),
-                        );
-                        
+                        );                        
                       }
                     )
                    )
