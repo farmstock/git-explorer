@@ -16,8 +16,9 @@ class HomeView extends StatelessWidget {
               tooltip: 'Add Project',
               child: Icon(Icons.add)
           ),
-          body:  model.projectList.length==0 ? _buildNoProductSection(context, model) :Container(
-                        
+          body:  model.projectList.length==0 ?
+                   _buildNoProductSection(context, model) 
+                   :Container(                        
                       child:ListView.builder(
                         shrinkWrap: true,
                       reverse: true,

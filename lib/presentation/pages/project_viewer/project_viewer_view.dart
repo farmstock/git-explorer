@@ -50,7 +50,7 @@ class _ProjectViewer extends StatelessWidget {
                   Container(
                     height: 30,
                     decoration: BoxDecoration(border: Border.all()),
-                    child: _topBarWidget,
+                    child: TopBar(),
                   ),
                   Expanded(child: Row(
                     children: <Widget>[
@@ -73,7 +73,22 @@ class _ProjectViewer extends StatelessWidget {
 
 
 
-Widget get _topBarWidget{
+// Widget get _topBarWidget{
+//     return Row(
+//       mainAxisSize: MainAxisSize.max,
+//       children: <Widget>[
+//         Padding(
+//           padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+//           child: FilePathWidget(),
+//         ),
+//         Expanded(child: Container(),),
+//         ChangeRepoBtn()
+//       ],
+//     );
+//   }
+  class  TopBar extends ViewModelWidget{
+  @override
+  Widget build(BuildContext context, _) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
@@ -85,6 +100,8 @@ Widget get _topBarWidget{
         ChangeRepoBtn()
       ],
     );
+  }
+    
   }
   
   class ChangeRepoBtn extends ViewModelWidget<BranchViewModel>{
