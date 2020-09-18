@@ -55,7 +55,7 @@ class _ProjectViewer extends StatelessWidget {
                   ),
                   Expanded(child: Row(
                     children: <Widget>[
-                      fileExplorer,
+                      FileExplorerContainer(),
                       fileViewer
                     ],
                   ),),

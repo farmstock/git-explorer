@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
@@ -7,8 +7,44 @@ import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view_m
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:stacked/stacked.dart';
 
 typedef Function OnFileSelected(TreeNodeEntity filename);
+
+class FileExplorerContainer extends ViewModelWidget<ProjectViewerViewModel>{
+  @override
+  Widget build(BuildContext context, ProjectViewerViewModel viewModel) {
+          return Container(
+        width: 250,
+        decoration: BoxDecoration(border: Border.all()),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              height: 30,
+              decoration: BoxDecoration(border: Border.all()),
+              child: BranchSelectorView(),
+            ),
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(border: Border.all()),
+                child: viewModel.rootNode==null ? Container():
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: FileExplorer(nodeEntity: viewModel.rootNode)),
+                )
+              ),
+            )
+          ],
+        ),
+      );
+
+  }
+  
+}
 
 
 Widget get fileExplorer{
