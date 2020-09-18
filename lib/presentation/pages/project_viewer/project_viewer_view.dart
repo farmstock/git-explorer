@@ -6,7 +6,6 @@ import 'package:git_viewer/presentation/pages/base/base_view.dart';
 import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view.dart';
 import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view.dart';
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
-import 'package:provider/provider.dart';
 import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -69,49 +68,71 @@ class _ProjectViewer extends StatelessWidget {
           );
         }
     ); 
-  }
+  }  
+}
 
-  Widget get _topBarWidget{
+
+
+Widget get _topBarWidget{
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 4.0, right: 4.0),
-          child: _filePathWidget,
+          child: FilePathWidget(),
         ),
         Expanded(child: Container(),),
-        _changRepoButton
+        ChangeRepoBtn()
       ],
     );
   }
-
-  Widget get _changRepoButton{
-    return Builder(
-      builder: (context) {
-        var projectEntity = Provider.of<BranchViewModel>(context).projectEntity;
-        return Tooltip(
+  
+  class ChangeRepoBtn extends ViewModelWidget<BranchViewModel>{
+  @override
+  Widget build(BuildContext context, BranchViewModel model) {
+    return Tooltip(
           message: "Change Repo",
           child: RaisedButton(
             child: Row(children: <Widget>[
               Icon(Icons.book),
               UiUtil.horizontalSpaceTiny(),
-              Text(projectEntity.userName+"/"+projectEntity.projectName)
+              Text(model.projectEntity.userName+"/"+model.projectEntity.projectName)
             ],),
             onPressed: (){
                 Navigator.pop(context);
             },
           ),
         );
-      }
-    );
+  }
+    
   }
 
-  Widget get _filePathWidget {
-    return Builder(
-      builder: (context){
-      TreeNodeEntity selectedNode = Provider.of<ProjectViewerViewModel>(
-          context).selectedFile;
-      return selectedNode == null ? Container():
+  //   Widget get _changRepoButton{
+  //   return Builder(
+  //     builder: (context) {
+  //       var projectEntity = Provider.of<BranchViewModel>(context).projectEntity;
+  //       return Tooltip(
+  //         message: "Change Repo",
+  //         child: RaisedButton(
+  //           child: Row(children: <Widget>[
+  //             Icon(Icons.book),
+  //             UiUtil.horizontalSpaceTiny(),
+  //             Text(projectEntity.userName+"/"+projectEntity.projectName)
+  //           ],),
+  //           onPressed: (){
+  //               Navigator.pop(context);
+  //           },
+  //         ),
+  //       );
+  //     }
+  //   );
+  // }
+
+class  FilePathWidget extends ViewModelWidget<ProjectViewerViewModel>{
+  @override
+  Widget build(BuildContext context, ProjectViewerViewModel model) {
+    TreeNodeEntity selectedNode = model.selectedFile;
+    return selectedNode == null ? Container():
       GestureDetector(
         child: Text(selectedNode.path, style: TextStyle(color: Colors.blue,),),
         onTap: () async{
@@ -123,10 +144,26 @@ class _ProjectViewer extends StatelessWidget {
           }
         },
       );
-      },
-    );
-  }
+  }  
 }
 
-
-
+  // Widget get _filePathWidget {
+  //   return Builder(
+  //     builder: (context){
+  //     TreeNodeEntity selectedNode = Provider.of<ProjectViewerViewModel>(
+  //         context).selectedFile;
+  //     return selectedNode == null ? Container():
+  //     GestureDetector(
+  //       child: Text(selectedNode.path, style: TextStyle(color: Colors.blue,),),
+  //       onTap: () async{
+  //         String url = selectedNode.url;
+  //         if (await canLaunch(url)) {
+  //           await launch(url);
+  //         } else {
+  //           throw 'Could not launch $url';
+  //         }
+  //       },
+  //     );
+  //     },
+  //   );
+  // }

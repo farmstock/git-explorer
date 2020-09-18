@@ -1,5 +1,4 @@
  import 'package:flutter/material.dart';
-import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
 import 'package:git_viewer/presentation/pages/branch_view_selector/branch_selector_view.dart';
@@ -47,40 +46,40 @@ class FileExplorerContainer extends ViewModelWidget<ProjectViewerViewModel>{
 }
 
 
-Widget get fileExplorer{
-  return Builder(
-    builder: (context) {
-      TreeNodeEntity rootNode = Provider.of<ProjectViewerViewModel>(context).rootNode;
-      return Container(
-        width: 250,
-        decoration: BoxDecoration(border: Border.all()),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              height: 30,
-              decoration: BoxDecoration(border: Border.all()),
-              child: BranchSelectorView(),
-            ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(border: Border.all()),
-                child: rootNode==null ? Container():
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: FileExplorer(nodeEntity: rootNode)),
-                )
-              ),
-            )
-          ],
-        ),
-      );
-    }
-  );
-}
+// Widget get fileExplorer{
+//   return Builder(
+//     builder: (context) {
+//       TreeNodeEntity rootNode = Provider.of<ProjectViewerViewModel>(context).rootNode;
+//       return Container(
+//         width: 250,
+//         decoration: BoxDecoration(border: Border.all()),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: <Widget>[
+//             Container(
+//               height: 30,
+//               decoration: BoxDecoration(border: Border.all()),
+//               child: BranchSelectorView(),
+//             ),
+//             Expanded(
+//               child: Container(
+//                 width: double.infinity,
+//                 decoration: BoxDecoration(border: Border.all()),
+//                 child: rootNode==null ? Container():
+//                 SingleChildScrollView(
+//                   scrollDirection: Axis.horizontal,
+//                   child: SingleChildScrollView(
+//                       scrollDirection: Axis.vertical,
+//                       child: FileExplorer(nodeEntity: rootNode)),
+//                 )
+//               ),
+//             )
+//           ],
+//         ),
+//       );
+//     }
+//   );
+// }
 
 
 class FileExplorer extends StatelessWidget {
@@ -102,7 +101,8 @@ class FileExplorer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 if(nodeEntity.isLeafNode) {
-                 locator<ProjectViewerViewModel>().addNodeInTab(nodeEntity,context);
+                  Provider.of<ProjectViewerViewModel>(
+                      context, listen: false).addNodeInTab(nodeEntity);                
                   return;
                 }
                 if (!(model.busy)) {

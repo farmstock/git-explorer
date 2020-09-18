@@ -59,7 +59,7 @@ class ProjectViewerViewModel extends BaseViewModel{
     _nodesInTab = [];
   }
 
-  void addNodeInTab(TreeNodeEntity treeNodeEntity, BuildContext context){
+  void addNodeInTab(TreeNodeEntity treeNodeEntity){
     if(!_nodesInTab.contains(treeNodeEntity))
       _nodesInTab.add(treeNodeEntity);
     _selectedFileNode = treeNodeEntity;
