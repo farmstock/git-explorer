@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
-
 import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view_model.dart';
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:git_viewer/presentation/widgets/code_viewer.dart';
@@ -42,6 +41,39 @@ class FileViewerContainer extends ViewModelWidget<ProjectViewerViewModel>{
       );
   }
 
+}
+
+class FileViewerWidgetBuilder extends ViewModelWidget<ProjectViewerViewModel>{
+  @override
+  Widget build(BuildContext context, ProjectViewerViewModel model) {
+   return Expanded(
+          child: Container(
+            decoration: BoxDecoration(border: Border.all()),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  height: 30,
+                  decoration: BoxDecoration(border: Border.all()),
+                  child: FileSelectionTabs(),
+                ),
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(border: Border.all(color: Colors.green),),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: model.selectedFile!=null ? FileViewer(model.selectedFile): Container(),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
+      );
+  }
+  
+  
 }
 
 Widget get fileViewer  {

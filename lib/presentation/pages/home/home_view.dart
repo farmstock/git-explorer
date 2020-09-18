@@ -45,10 +45,12 @@ class HomeView extends StatelessWidget {
               );
             }
           
-          Center  _buildNoProductSection(BuildContext context, viewModel) {
-
-                return Center(
-                  child:Text('Welcome to the Git Explorer \n Click on Button to Start', style: TextStyle( fontSize: 20.0, color: Colors.blue)),
-                );
-            }
+  Center  _buildNoProductSection
+  (BuildContext context, viewModel) {
+      return Center(
+        child:Text('Welcome to the Git Explorer \n Click on Button to Start', 
+        style: TextStyle( fontSize: 20.0, color: Colors.blue)
+      ),              
+    );
+  }        
 }

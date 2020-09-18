@@ -55,7 +55,7 @@ class _ProjectViewer extends StatelessWidget {
                   Expanded(child: Row(
                     children: <Widget>[
                       FileExplorerContainer(),
-                      fileViewer
+                      FileViewerWidgetBuilder()
                     ],
                   ),),
                   Container(
@@ -86,7 +86,7 @@ class _ProjectViewer extends StatelessWidget {
 //       ],
 //     );
 //   }
-  class  TopBar extends ViewModelWidget{
+  class  TopBar extends ViewModelWidget<ProjectViewerViewModel>{
   @override
   Widget build(BuildContext context, _) {
     return Row(

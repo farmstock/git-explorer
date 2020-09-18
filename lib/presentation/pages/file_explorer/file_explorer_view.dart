@@ -12,7 +12,7 @@ typedef Function OnFileSelected(TreeNodeEntity filename);
 
 class FileExplorerContainer extends ViewModelWidget<ProjectViewerViewModel>{
   @override
-  Widget build(BuildContext context, ProjectViewerViewModel viewModel) {
+  Widget build(BuildContext context, ProjectViewerViewModel model) {
           return Container(
         width: 250,
         decoration: BoxDecoration(border: Border.all()),
@@ -28,12 +28,12 @@ class FileExplorerContainer extends ViewModelWidget<ProjectViewerViewModel>{
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(border: Border.all()),
-                child: viewModel.rootNode==null ? Container():
+                child: model.rootNode==null ? Container():
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: SingleChildScrollView(
                       scrollDirection: Axis.vertical,
-                      child: FileExplorer(nodeEntity: viewModel.rootNode)),
+                      child: FileExplorer(nodeEntity: model.rootNode)),
                 )
               ),
             )
