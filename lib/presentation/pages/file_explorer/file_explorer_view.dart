@@ -82,10 +82,12 @@ class FileExplorerContainer extends ViewModelWidget<ProjectViewerViewModel>{
 // }
 
 
+
 class FileExplorer extends StatelessWidget {
 
   final TreeNodeEntity nodeEntity;
   FileExplorer({this.nodeEntity});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -160,4 +162,5 @@ class FileExplorer extends StatelessWidget {
     );
   }
 }
+
 

@@ -60,6 +60,7 @@ class ProjectViewerViewModel extends BaseViewModel{
   }
 
   void addNodeInTab(TreeNodeEntity treeNodeEntity){
+    print("add node cliched");
     if(!_nodesInTab.contains(treeNodeEntity))
       _nodesInTab.add(treeNodeEntity);
     _selectedFileNode = treeNodeEntity;

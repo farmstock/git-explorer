@@ -1,13 +1,10 @@
 
 
-import 'dart:html';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:git_viewer/presentation/widgets/drop_down.dart';
-import 'package:provider/provider.dart';
 import 'package:stacked/stacked.dart';
 
 class BranchSelectorView extends ViewModelWidget<BranchViewModel>{
@@ -18,8 +15,6 @@ class BranchSelectorView extends ViewModelWidget<BranchViewModel>{
         return dropDown(model.branchList, model.selectedBranch,model);
       return Container();
   }
-
-
  
   Widget dropDown(List<BranchEntity> branchList, BranchEntity selectedBranch, BranchViewModel model){
     DropDownItemModel selectedItem;
