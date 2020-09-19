@@ -1,4 +1,5 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
 import 'package:git_viewer/presentation/pages/branch_view_selector/branch_selector_view.dart';
@@ -103,8 +104,10 @@ class FileExplorer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 if(nodeEntity.isLeafNode) {
-                  Provider.of<ProjectViewerViewModel>(
-                      context, listen: false).addNodeInTab(nodeEntity);                
+                 // getNode(nodeEntity); 
+                    Provider.of<ProjectViewerViewModel>(
+                        context, listen: false).addNodeInTab(nodeEntity);      
+                  //ViewModelWidget<ProjectViewerViewModel>(reactive: false,) ;     
                   return;
                 }
                 if (!(model.busy)) {
@@ -125,6 +128,10 @@ class FileExplorer extends StatelessWidget {
       },
     );
   }
+
+  // class getNode extends ViewModelWidget<ProjectViewerViewModel> (TreeNodeEntity nodeEntity){
+  //    locator<ProjectViewerViewModel>().addNodeInTab(nodeEntity);
+  // }
 
   Widget row(bool isBusy) {
     return Row(children: <Widget>[

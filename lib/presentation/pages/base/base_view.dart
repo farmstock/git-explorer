@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:git_viewer/presentation/pages/base/base_view_model.dart';
 import 'package:provider/provider.dart';
+//import 'package:stacked/stacked.dart';
 
 import '../../../injection_container.dart';
 
@@ -40,5 +41,8 @@ class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
     return ChangeNotifierProvider<T>(
         create: (context) => model,
         child: Consumer<T>(builder: widget.builder));
+    // return ChangeNotifierProvider<T>.value(
+    //   value: model,
+    //   child: Consumer<T>(builder: widget.builder,));
   }
 }
