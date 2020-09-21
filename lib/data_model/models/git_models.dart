@@ -1,26 +1,27 @@
 import 'package:equatable/equatable.dart';
+import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'git_models.g.dart';
 
 
-@JsonSerializable()
-class GithubTreeNodeModel extends Equatable {
-  String path;
-  String type;
-  String sha;
+// @JsonSerializable()
+// class GithubTreeNodeModel extends Equatable {
+//   String path;
+//   String type;
+//   String sha;
 
-  GithubTreeNodeModel({this.path, this.type, this.sha});
+//   GithubTreeNodeModel({this.path, this.type, this.sha});
 
-  @override
-  List<Object> get props => [path, type, sha];
+//   @override
+//   List<Object> get props => [path, type, sha];
 
-  factory GithubTreeNodeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeNodeModelFromJson(json);
-  Map<String, dynamic> toJson() => _$GithubTreeNodeModelToJson(this);
+//   factory GithubTreeNodeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeNodeModelFromJson(json);
+//   Map<String, dynamic> toJson() => _$GithubTreeNodeModelToJson(this);
 
-  bool get isLeafNode => type=='blob';
+//   bool get isLeafNode => type=='blob';
 
-}
+// }
 
 @JsonSerializable()
 class GithubTreeModel  extends Equatable {

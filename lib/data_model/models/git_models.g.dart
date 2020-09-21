@@ -6,22 +6,6 @@ part of 'git_models.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GithubTreeNodeModel _$GithubTreeNodeModelFromJson(Map<String, dynamic> json) {
-  return GithubTreeNodeModel(
-    path: json['path'] as String,
-    type: json['type'] as String,
-    sha: json['sha'] as String,
-  );
-}
-
-Map<String, dynamic> _$GithubTreeNodeModelToJson(
-        GithubTreeNodeModel instance) =>
-    <String, dynamic>{
-      'path': instance.path,
-      'type': instance.type,
-      'sha': instance.sha,
-    };
-
 GithubTreeModel _$GithubTreeModelFromJson(Map<String, dynamic> json) {
   return GithubTreeModel(
     sha: json['sha'] as String,
