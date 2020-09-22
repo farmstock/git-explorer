@@ -6,23 +6,6 @@ part of 'git_models.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GithubTreeModel _$GithubTreeModelFromJson(Map<String, dynamic> json) {
-  return GithubTreeModel(
-    sha: json['sha'] as String,
-    tree: (json['tree'] as List)
-        ?.map((e) => e == null
-            ? null
-            : GithubTreeNodeModel.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-  );
-}
-
-Map<String, dynamic> _$GithubTreeModelToJson(GithubTreeModel instance) =>
-    <String, dynamic>{
-      'sha': instance.sha,
-      'tree': instance.tree,
-    };
-
 CommitDetailModel _$CommitDetailModelFromJson(Map<String, dynamic> json) {
   return CommitDetailModel(
     tree: GithubTreeModel.fromJson(json['tree'] as Map<String, dynamic>),
