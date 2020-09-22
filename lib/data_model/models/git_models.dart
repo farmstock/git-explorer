@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree/git_tree_models.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -23,23 +24,23 @@ part 'git_models.g.dart';
 
 // }
 
-@JsonSerializable()
-class GithubTreeModel  extends Equatable {
-  String sha;
+// @JsonSerializable()
+// class GithubTreeModel  extends Equatable {
+//   String sha;
 
-  @JsonKey(nullable: true)
-  List<GithubTreeNodeModel> tree;
+//   @JsonKey(nullable: true)
+//   List<GithubTreeNodeModel> tree;
 
-  GithubTreeModel({this.sha, this.tree});
-
-
-  factory GithubTreeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeModelFromJson(json);
-  Map<String, dynamic> toJson() => _$GithubTreeModelToJson(this);
+//   GithubTreeModel({this.sha, this.tree});
 
 
-  @override
-  List<Object> get props => [sha, tree];
-}
+//   factory GithubTreeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeModelFromJson(json);
+//   Map<String, dynamic> toJson() => _$GithubTreeModelToJson(this);
+
+
+//   @override
+//   List<Object> get props => [sha, tree];
+// }
 
 @JsonSerializable(nullable: false)
 class CommitDetailModel extends Equatable{

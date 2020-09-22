@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'commit_details_models.dart';
+part of 'git_tree_models.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
