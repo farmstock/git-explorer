@@ -8,6 +8,9 @@ part of 'commit_details_models.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+GithubTreeModel _$GithubTreeModelFromJson(Map<String, dynamic> json) {
+  return _GithubTreeModel.fromJson(json);
+}
 
 class _$GithubTreeModelTearOff {
   const _$GithubTreeModelTearOff();
@@ -30,6 +33,7 @@ mixin _$GithubTreeModel {
   @JsonKey(nullable: true)
   List<GithubTreeNodeModel> get tree;
 
+  Map<String, dynamic> toJson();
   $GithubTreeModelCopyWith<GithubTreeModel> get copyWith;
 }
 
@@ -93,9 +97,13 @@ class __$GithubTreeModelCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
 class _$_GithubTreeModel extends _GithubTreeModel {
   _$_GithubTreeModel({this.sha, @JsonKey(nullable: true) this.tree})
       : super._();
+
+  factory _$_GithubTreeModel.fromJson(Map<String, dynamic> json) =>
+      _$_$_GithubTreeModelFromJson(json);
 
   @override
   final String sha;
@@ -127,6 +135,11 @@ class _$_GithubTreeModel extends _GithubTreeModel {
   @override
   _$GithubTreeModelCopyWith<_GithubTreeModel> get copyWith =>
       __$GithubTreeModelCopyWithImpl<_GithubTreeModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_GithubTreeModelToJson(this);
+  }
 }
 
 abstract class _GithubTreeModel extends GithubTreeModel {
@@ -135,6 +148,9 @@ abstract class _GithubTreeModel extends GithubTreeModel {
           {String sha,
           @JsonKey(nullable: true) List<GithubTreeNodeModel> tree}) =
       _$_GithubTreeModel;
+
+  factory _GithubTreeModel.fromJson(Map<String, dynamic> json) =
+      _$_GithubTreeModel.fromJson;
 
   @override
   String get sha;

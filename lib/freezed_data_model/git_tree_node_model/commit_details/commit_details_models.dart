@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
 
 part 'commit_details_models.freezed.dart';
-//part 'commit_details_models.g.dart';
+part 'commit_details_models.g.dart';
 
 
 @freezed
@@ -15,7 +15,7 @@ abstract class GithubTreeModel implements _$GithubTreeModel{
   }) = _GithubTreeModel;
 
   
-  //GithubTreeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeModelFromJson(json);
+ factory GithubTreeModel.fromJson(Map<String, dynamic> json) => _$GithubTreeModelFromJson(json);
 
  
 }
