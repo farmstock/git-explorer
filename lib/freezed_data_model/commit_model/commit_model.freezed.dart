@@ -17,10 +17,8 @@ class _$CommitModelTearOff {
   const _$CommitModelTearOff();
 
 // ignore: unused_element
-  _CommitModel call({String path, String type, String sha}) {
+  _CommitModel call({String sha}) {
     return _CommitModel(
-      path: path,
-      type: type,
       sha: sha,
     );
   }
@@ -37,8 +35,6 @@ const $CommitModel = _$CommitModelTearOff();
 
 /// @nodoc
 mixin _$CommitModel {
-  String get path;
-  String get type;
   String get sha;
 
   Map<String, dynamic> toJson();
@@ -50,7 +46,7 @@ abstract class $CommitModelCopyWith<$Res> {
   factory $CommitModelCopyWith(
           CommitModel value, $Res Function(CommitModel) then) =
       _$CommitModelCopyWithImpl<$Res>;
-  $Res call({String path, String type, String sha});
+  $Res call({String sha});
 }
 
 /// @nodoc
@@ -63,13 +59,9 @@ class _$CommitModelCopyWithImpl<$Res> implements $CommitModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object path = freezed,
-    Object type = freezed,
     Object sha = freezed,
   }) {
     return _then(_value.copyWith(
-      path: path == freezed ? _value.path : path as String,
-      type: type == freezed ? _value.type : type as String,
       sha: sha == freezed ? _value.sha : sha as String,
     ));
   }
@@ -82,7 +74,7 @@ abstract class _$CommitModelCopyWith<$Res>
           _CommitModel value, $Res Function(_CommitModel) then) =
       __$CommitModelCopyWithImpl<$Res>;
   @override
-  $Res call({String path, String type, String sha});
+  $Res call({String sha});
 }
 
 /// @nodoc
@@ -97,13 +89,9 @@ class __$CommitModelCopyWithImpl<$Res> extends _$CommitModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
-    Object type = freezed,
     Object sha = freezed,
   }) {
     return _then(_CommitModel(
-      path: path == freezed ? _value.path : path as String,
-      type: type == freezed ? _value.type : type as String,
       sha: sha == freezed ? _value.sha : sha as String,
     ));
   }
@@ -113,41 +101,30 @@ class __$CommitModelCopyWithImpl<$Res> extends _$CommitModelCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommitModel extends _CommitModel {
-  _$_CommitModel({this.path, this.type, this.sha}) : super._();
+  _$_CommitModel({this.sha}) : super._();
 
   factory _$_CommitModel.fromJson(Map<String, dynamic> json) =>
       _$_$_CommitModelFromJson(json);
 
   @override
-  final String path;
-  @override
-  final String type;
-  @override
   final String sha;
 
   @override
   String toString() {
-    return 'CommitModel(path: $path, type: $type, sha: $sha)';
+    return 'CommitModel(sha: $sha)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CommitModel &&
-            (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.sha, sha) ||
                 const DeepCollectionEquality().equals(other.sha, sha)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(sha);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(sha);
 
   @override
   _$CommitModelCopyWith<_CommitModel> get copyWith =>
@@ -161,15 +138,11 @@ class _$_CommitModel extends _CommitModel {
 
 abstract class _CommitModel extends CommitModel {
   _CommitModel._() : super._();
-  factory _CommitModel({String path, String type, String sha}) = _$_CommitModel;
+  factory _CommitModel({String sha}) = _$_CommitModel;
 
   factory _CommitModel.fromJson(Map<String, dynamic> json) =
       _$_CommitModel.fromJson;
 
-  @override
-  String get path;
-  @override
-  String get type;
   @override
   String get sha;
   @override

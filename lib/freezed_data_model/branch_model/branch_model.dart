@@ -1,8 +1,8 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:git_viewer/freezed_data_model/commit_model/commit_model.dart';
 //import 'package:git_viewer/data_model/models/git_models.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_model/commit_model.dart';
 
 part 'branch_model.freezed.dart';
 part 'branch_model.g.dart';

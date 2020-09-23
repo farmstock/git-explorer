@@ -1,9 +1,9 @@
 import 'package:equatable/equatable.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_details_model/commit_details_model.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_model/commit_model.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree/git_tree_models.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
-import 'package:json_annotation/json_annotation.dart';
+//import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_details_model/commit_details_model.dart';
+// import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_model/commit_model.dart';
+// import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree/git_tree_models.dart';
+// import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
+// import 'package:json_annotation/json_annotation.dart';
 
 //part 'git_models.g.dart';
 
