@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:git_viewer/data_model/models/git_models.dart';
+import 'package:git_viewer/freezed_data_model/branch_model/branch_model.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 

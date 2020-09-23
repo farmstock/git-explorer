@@ -12,6 +12,7 @@ GithubTreeModel _$GithubTreeModelFromJson(Map<String, dynamic> json) {
   return _GithubTreeModel.fromJson(json);
 }
 
+/// @nodoc
 class _$GithubTreeModelTearOff {
   const _$GithubTreeModelTearOff();
 
@@ -23,11 +24,18 @@ class _$GithubTreeModelTearOff {
       tree: tree,
     );
   }
+
+// ignore: unused_element
+  GithubTreeModel fromJson(Map<String, Object> json) {
+    return GithubTreeModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $GithubTreeModel = _$GithubTreeModelTearOff();
 
+/// @nodoc
 mixin _$GithubTreeModel {
   String get sha;
   @JsonKey(nullable: true)
@@ -37,6 +45,7 @@ mixin _$GithubTreeModel {
   $GithubTreeModelCopyWith<GithubTreeModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $GithubTreeModelCopyWith<$Res> {
   factory $GithubTreeModelCopyWith(
           GithubTreeModel value, $Res Function(GithubTreeModel) then) =
@@ -45,6 +54,7 @@ abstract class $GithubTreeModelCopyWith<$Res> {
       {String sha, @JsonKey(nullable: true) List<GithubTreeNodeModel> tree});
 }
 
+/// @nodoc
 class _$GithubTreeModelCopyWithImpl<$Res>
     implements $GithubTreeModelCopyWith<$Res> {
   _$GithubTreeModelCopyWithImpl(this._value, this._then);
@@ -65,6 +75,7 @@ class _$GithubTreeModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$GithubTreeModelCopyWith<$Res>
     implements $GithubTreeModelCopyWith<$Res> {
   factory _$GithubTreeModelCopyWith(
@@ -75,6 +86,7 @@ abstract class _$GithubTreeModelCopyWith<$Res>
       {String sha, @JsonKey(nullable: true) List<GithubTreeNodeModel> tree});
 }
 
+/// @nodoc
 class __$GithubTreeModelCopyWithImpl<$Res>
     extends _$GithubTreeModelCopyWithImpl<$Res>
     implements _$GithubTreeModelCopyWith<$Res> {
@@ -98,6 +110,8 @@ class __$GithubTreeModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_GithubTreeModel extends _GithubTreeModel {
   _$_GithubTreeModel({this.sha, @JsonKey(nullable: true) this.tree})
       : super._();

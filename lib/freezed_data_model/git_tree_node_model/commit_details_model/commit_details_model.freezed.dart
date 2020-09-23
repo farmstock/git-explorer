@@ -12,6 +12,7 @@ CommitDetailModel _$CommitDetailModelFromJson(Map<String, dynamic> json) {
   return _CommitDetailModel.fromJson(json);
 }
 
+/// @nodoc
 class _$CommitDetailModelTearOff {
   const _$CommitDetailModelTearOff();
 
@@ -21,11 +22,18 @@ class _$CommitDetailModelTearOff {
       tree: tree,
     );
   }
+
+// ignore: unused_element
+  CommitDetailModel fromJson(Map<String, Object> json) {
+    return CommitDetailModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CommitDetailModel = _$CommitDetailModelTearOff();
 
+/// @nodoc
 mixin _$CommitDetailModel {
   GithubTreeModel get tree;
 
@@ -33,6 +41,7 @@ mixin _$CommitDetailModel {
   $CommitDetailModelCopyWith<CommitDetailModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $CommitDetailModelCopyWith<$Res> {
   factory $CommitDetailModelCopyWith(
           CommitDetailModel value, $Res Function(CommitDetailModel) then) =
@@ -42,6 +51,7 @@ abstract class $CommitDetailModelCopyWith<$Res> {
   $GithubTreeModelCopyWith<$Res> get tree;
 }
 
+/// @nodoc
 class _$CommitDetailModelCopyWithImpl<$Res>
     implements $CommitDetailModelCopyWith<$Res> {
   _$CommitDetailModelCopyWithImpl(this._value, this._then);
@@ -70,6 +80,7 @@ class _$CommitDetailModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$CommitDetailModelCopyWith<$Res>
     implements $CommitDetailModelCopyWith<$Res> {
   factory _$CommitDetailModelCopyWith(
@@ -82,6 +93,7 @@ abstract class _$CommitDetailModelCopyWith<$Res>
   $GithubTreeModelCopyWith<$Res> get tree;
 }
 
+/// @nodoc
 class __$CommitDetailModelCopyWithImpl<$Res>
     extends _$CommitDetailModelCopyWithImpl<$Res>
     implements _$CommitDetailModelCopyWith<$Res> {
@@ -103,6 +115,8 @@ class __$CommitDetailModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_CommitDetailModel extends _CommitDetailModel {
   _$_CommitDetailModel({this.tree}) : super._();
 

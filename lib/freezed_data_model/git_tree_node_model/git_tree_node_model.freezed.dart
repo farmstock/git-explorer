@@ -12,6 +12,7 @@ GithubTreeNodeModel _$GithubTreeNodeModelFromJson(Map<String, dynamic> json) {
   return _GithubTreeNodeModel.fromJson(json);
 }
 
+/// @nodoc
 class _$GithubTreeNodeModelTearOff {
   const _$GithubTreeNodeModelTearOff();
 
@@ -23,11 +24,18 @@ class _$GithubTreeNodeModelTearOff {
       sha: sha,
     );
   }
+
+// ignore: unused_element
+  GithubTreeNodeModel fromJson(Map<String, Object> json) {
+    return GithubTreeNodeModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $GithubTreeNodeModel = _$GithubTreeNodeModelTearOff();
 
+/// @nodoc
 mixin _$GithubTreeNodeModel {
   String get path;
   String get type;
@@ -37,6 +45,7 @@ mixin _$GithubTreeNodeModel {
   $GithubTreeNodeModelCopyWith<GithubTreeNodeModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $GithubTreeNodeModelCopyWith<$Res> {
   factory $GithubTreeNodeModelCopyWith(
           GithubTreeNodeModel value, $Res Function(GithubTreeNodeModel) then) =
@@ -44,6 +53,7 @@ abstract class $GithubTreeNodeModelCopyWith<$Res> {
   $Res call({String path, String type, String sha});
 }
 
+/// @nodoc
 class _$GithubTreeNodeModelCopyWithImpl<$Res>
     implements $GithubTreeNodeModelCopyWith<$Res> {
   _$GithubTreeNodeModelCopyWithImpl(this._value, this._then);
@@ -66,6 +76,7 @@ class _$GithubTreeNodeModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$GithubTreeNodeModelCopyWith<$Res>
     implements $GithubTreeNodeModelCopyWith<$Res> {
   factory _$GithubTreeNodeModelCopyWith(_GithubTreeNodeModel value,
@@ -75,6 +86,7 @@ abstract class _$GithubTreeNodeModelCopyWith<$Res>
   $Res call({String path, String type, String sha});
 }
 
+/// @nodoc
 class __$GithubTreeNodeModelCopyWithImpl<$Res>
     extends _$GithubTreeNodeModelCopyWithImpl<$Res>
     implements _$GithubTreeNodeModelCopyWith<$Res> {
@@ -100,6 +112,8 @@ class __$GithubTreeNodeModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_GithubTreeNodeModel extends _GithubTreeNodeModel {
   _$_GithubTreeNodeModel({this.path, this.type, this.sha}) : super._();
 

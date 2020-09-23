@@ -9,6 +9,8 @@ import 'package:git_viewer/data_model/datasources/git_local_data_source.dart';
 import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
+import 'package:git_viewer/freezed_data_model/branch_model/branch_model.dart';
+import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_details_model/commit_details_model.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree/git_tree_models.dart';
 import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 

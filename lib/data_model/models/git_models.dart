@@ -1,9 +1,11 @@
 import 'package:equatable/equatable.dart';
+import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_details_model/commit_details_model.dart';
+import 'package:git_viewer/freezed_data_model/git_tree_node_model/commit_model/commit_model.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree/git_tree_models.dart';
 import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'git_models.g.dart';
+//part 'git_models.g.dart';
 
 
 // @JsonSerializable()
@@ -42,52 +44,52 @@ part 'git_models.g.dart';
 //   List<Object> get props => [sha, tree];
 // }
 
-@JsonSerializable(nullable: false)
-class CommitDetailModel extends Equatable{
+// @JsonSerializable(nullable: false)
+// class CommitDetailModel extends Equatable{
 
-  GithubTreeModel tree;
+//   GithubTreeModel tree;
 
-  CommitDetailModel({this.tree});
+//   CommitDetailModel({this.tree});
 
-  factory CommitDetailModel.fromJson(Map<String, dynamic> json) => _$CommitDetailModelFromJson(json);
-  Map<String, dynamic> toJson() => _$CommitDetailModelToJson(this);
-
-
-  @override
-  List<Object> get props => [tree];
-
-}
+//   factory CommitDetailModel.fromJson(Map<String, dynamic> json) => _$CommitDetailModelFromJson(json);
+//   Map<String, dynamic> toJson() => _$CommitDetailModelToJson(this);
 
 
-@JsonSerializable(nullable: false)
-class CommitModel extends Equatable{
+//   @override
+//   List<Object> get props => [tree];
 
-  String sha;
-
-  CommitModel({this.sha});
-
-  factory CommitModel.fromJson(Map<String, dynamic> json) => _$CommitModelFromJson(json);
-  Map<String, dynamic> toJson() => _$CommitModelToJson(this);
+// }
 
 
-  @override
-  List<Object> get props => [sha];
+// @JsonSerializable(nullable: false)
+// class CommitModel extends Equatable{
 
-}
+//   String sha;
 
-@JsonSerializable(nullable: false)
-class BranchModel extends Equatable{
+//   CommitModel({this.sha});
 
-  String name;
-  CommitModel commit;
-
-  BranchModel({this.name, this.commit});
+//   factory CommitModel.fromJson(Map<String, dynamic> json) => _$CommitModelFromJson(json);
+//   Map<String, dynamic> toJson() => _$CommitModelToJson(this);
 
 
-  factory BranchModel.fromJson(Map<String, dynamic> json) => _$BranchModelFromJson(json);
-  Map<String, dynamic> toJson() => _$BranchModelToJson(this);
+//   @override
+//   List<Object> get props => [sha];
 
-  @override
-  List<Object> get props => [name, commit];
+// }
 
-}
+//@JsonSerializable(nullable: false)
+// class BranchModel extends Equatable{
+
+//   String name;
+//   CommitModel commit;
+
+//   BranchModel({this.name, this.commit});
+
+
+//   factory BranchModel.fromJson(Map<String, dynamic> json) => _$BranchModelFromJson(json);
+//   Map<String, dynamic> toJson() => _$BranchModelToJson(this);
+
+//   @override
+//   List<Object> get props => [name, commit];
+
+//}

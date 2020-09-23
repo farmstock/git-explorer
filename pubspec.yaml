@@ -48,7 +48,7 @@ dependencies:
   stacked: ^1.7.6
   stacked_services: ^0.5.2
   injectable: null
-  freezed_annotation: ^0.11.0+1
+  freezed_annotation: ^0.12.0
 
 dev_dependencies:
   flutter_test:
@@ -56,7 +56,7 @@ dev_dependencies:
   injectable_generator: null
   auto_route_generator: null
   build_runner: null
-  freezed: ^0.11.6
+  freezed: ^0.12.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
