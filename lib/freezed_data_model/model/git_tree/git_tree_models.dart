@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:git_viewer/freezed_data_model/git_tree_node_model/git_tree_node_model.dart';
-
+import 'package:git_viewer/freezed_data_model/model/git_tree_node_model/git_tree_node_model.dart';
 part 'git_tree_models.freezed.dart';
 part 'git_tree_models.g.dart';
 

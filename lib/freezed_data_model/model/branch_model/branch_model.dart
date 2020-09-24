@@ -1,7 +1,6 @@
-
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:git_viewer/freezed_data_model/commit_model/commit_model.dart';
+import 'package:git_viewer/freezed_data_model/model/commit_model/commit_model.dart';
+
 //import 'package:git_viewer/data_model/models/git_models.dart';
 
 part 'branch_model.freezed.dart';

@@ -4,14 +4,16 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/core/error/exceptions.dart';
 import 'package:git_viewer/core/error/failures.dart';
-import 'package:git_viewer/data_model/datasources/git_data_source.dart';
-import 'package:git_viewer/data_model/datasources/git_local_data_source.dart';
+
 import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:git_viewer/domain/entities/git_entities.dart';
 import 'package:git_viewer/domain/repositories/git_repository.dart';
-import 'package:git_viewer/freezed_data_model/branch_model/branch_model.dart';
-import 'package:git_viewer/freezed_data_model/commit_details_model/commit_details_model.dart';
-import 'package:git_viewer/freezed_data_model/git_tree/git_tree_models.dart';
+import 'package:git_viewer/freezed_data_model/datasources/git_data_source.dart';
+import 'package:git_viewer/freezed_data_model/datasources/git_local_data_source.dart';
+import 'package:git_viewer/freezed_data_model/model/branch_model/branch_model.dart';
+import 'package:git_viewer/freezed_data_model/model/commit_details_model/commit_details_model.dart';
+import 'package:git_viewer/freezed_data_model/model/git_tree/git_tree_models.dart';
+
 import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 
 // Cache constants
