@@ -22,3 +22,20 @@ Map<String, dynamic> _$_$_GithubTreeNodeModelToJson(
       'type': instance.type,
       'sha': instance.sha,
     };
+
+_$_GithubTreeModel _$_$_GithubTreeModelFromJson(Map<String, dynamic> json) {
+  return _$_GithubTreeModel(
+    sha: json['sha'] as String,
+    tree: (json['tree'] as List)
+        ?.map((e) => e == null
+            ? null
+            : GithubTreeNodeModel.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_GithubTreeModelToJson(_$_GithubTreeModel instance) =>
+    <String, dynamic>{
+      'sha': instance.sha,
+      'tree': instance.tree,
+    };

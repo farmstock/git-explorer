@@ -4,7 +4,7 @@ import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:git_viewer/freezed_data_model/model/branch_model/branch_model.dart';
 import 'package:git_viewer/freezed_data_model/model/commit_details_model/commit_details_model.dart';
 import 'package:git_viewer/freezed_data_model/model/commit_model/commit_model.dart';
-import 'package:git_viewer/freezed_data_model/model/git_tree/git_tree_models.dart';
+//import 'package:git_viewer/freezed_data_model/model/git_tree/git_tree_models.dart';
 import 'package:git_viewer/freezed_data_model/model/git_tree_node_model/git_tree_node_model.dart';
 
 import '../../fixtures/fixture_reader.dart';
