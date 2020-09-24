@@ -1,8 +1,6 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:git_viewer/domain/entities/git_entities.dart';
+import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
+
 import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
 import 'package:git_viewer/presentation/widgets/drop_down.dart';
 import 'package:stacked/stacked.dart';

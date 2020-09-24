@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/core/util/ui_util.dart';
-import 'package:git_viewer/domain/entities/git_entities.dart';
+
+import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/presentation/pages/base/base_view.dart';
 import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view.dart';
 import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view.dart';

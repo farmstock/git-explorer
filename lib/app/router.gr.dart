@@ -8,8 +8,9 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 
-import '../domain/entities/git_entities.dart';
+
 import '../presentation/pages/home/home_page.dart';
 import '../presentation/pages/project_viewer/project_viewer_page.dart';
 
