@@ -9,8 +9,6 @@ import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart
 import 'package:git_viewer/services/shared_prefrences_service/local_storage_util.dart';
 import 'package:http/http.dart' as http;
 import 'package:stacked_services/stacked_services.dart';
-
-import 'domain/repositories/git_repository.dart';
 import 'freezed_data_model/datasources/git_data_source.dart';
 import 'freezed_data_model/datasources/git_local_data_source.dart';
 
