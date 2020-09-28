@@ -18,15 +18,6 @@ import 'package:git_viewer/services/shared_prefrences_service/local_storage_util
 
 final String PROJECT_ENTITY_LIST_KEY = 'project_entity_list';
 
-// abstract class GitRepository{
-//   Future<Either<Failure, List<BranchEntity>>> getAllBranches();
-//   Future<Either<Failure, List<TreeNodeEntity>>> getChildNodes(TreeNodeEntity treeNodeEntity);
-//   Future<Either<Failure, TreeNodeEntity>> getRootNode(BranchEntity branchEntity);
-//   Future<Either<Failure, String>> getRawContent(TreeNodeEntity treeNodeEntity);
-//   Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList();
-//   Future<Either<Failure, Unit>> saveProjectEntityList(List<ProjectEntity> projectEntityList);
-// }
-
 
 class GitRepository  {
 
