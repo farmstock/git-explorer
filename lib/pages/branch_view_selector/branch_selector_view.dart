@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/pages/project_viewer/project_viewer_viewmodels.dart';
+<<<<<<< HEAD:lib/pages/branch_view_selector/branch_selector_view.dart
 import 'package:git_viewer/shared/widgets/drop_down.dart';
 
 
+=======
+
+
+import 'package:git_viewer/presentation/widgets/drop_down.dart';
+>>>>>>> faaa3d924df805d4727781a16ffbacbdcca5bdc9:lib/presentation/pages/branch_view_selector/branch_selector_view.dart
 import 'package:stacked/stacked.dart';
 
 class BranchSelectorView extends ViewModelWidget<BranchViewModel>{

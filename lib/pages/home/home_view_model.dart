@@ -1,10 +1,14 @@
 import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/app/router.gr.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
+<<<<<<< HEAD:lib/pages/home/home_view_model.dart
 import 'package:git_viewer/freezed_data_model/repositories/git_repository.dart';
+=======
+>>>>>>> faaa3d924df805d4727781a16ffbacbdcca5bdc9:lib/presentation/pages/home/home_view_model.dart
 import 'package:git_viewer/pages/base/base_view_model.dart';
 
 import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart';
+import 'package:git_viewer/services/git_api_service/api_git_repository.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../injection_container.dart';

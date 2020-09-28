@@ -3,8 +3,13 @@ import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/pages/base/base_view.dart';
 import 'package:git_viewer/pages/branch_view_selector/branch_selector_view.dart';
+<<<<<<< HEAD:lib/pages/file_explorer/file_explorer_view.dart
 import 'package:git_viewer/pages/project_viewer/project_viewer_viewmodels.dart';
 
+=======
+import 'package:git_viewer/pages/file_explorer/file_explorer_view_model.dart';
+import 'package:git_viewer/pages/project_viewer/project_viewer_viewmodels.dart';
+>>>>>>> faaa3d924df805d4727781a16ffbacbdcca5bdc9:lib/presentation/pages/file_explorer/file_explorer_view.dart
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:stacked/stacked.dart';

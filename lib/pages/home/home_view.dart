@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:git_viewer/pages/home/home_view_model.dart';
+<<<<<<< HEAD:lib/pages/home/home_view.dart
 
+=======
+>>>>>>> faaa3d924df805d4727781a16ffbacbdcca5bdc9:lib/presentation/pages/home/home_view.dart
 import 'package:stacked/stacked.dart';
 
 
