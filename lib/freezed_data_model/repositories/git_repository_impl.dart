@@ -22,7 +22,7 @@ import 'package:git_viewer/services/shared_prefrences_service/local_storage_util
 final String PROJECT_ENTITY_LIST_KEY = 'project_entity_list';
 
 
-class GitRepositoryImpl implements GitRepository{
+class GitRepositoryImpl {
 
   final GitRemoteDataSource gitDataSource;
   final GitLocalDataSource gitLocalDataSource;
@@ -95,7 +95,7 @@ class GitRepositoryImpl implements GitRepository{
     }
   }
 
-  @override
+  //@override
   Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList() async {
     try {
       List<dynamic> list = localStorageManager.getFromDisk(PROJECT_ENTITY_LIST_KEY);
