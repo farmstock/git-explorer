@@ -2,10 +2,13 @@ import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/app/router.gr.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/freezed_data_model/repositories/git_repository.dart';
-import 'package:git_viewer/presentation/pages/base/base_view_model.dart';
+import 'package:git_viewer/pages/base/base_view_model.dart';
+
 import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart';
 import 'package:stacked_services/stacked_services.dart';
-import '../../../injection_container.dart';
+
+import '../../injection_container.dart';
+
 
 class HomeViewModel extends BaseViewModel{
 

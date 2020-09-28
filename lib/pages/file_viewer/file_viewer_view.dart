@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
-import 'package:git_viewer/presentation/pages/base/base_view.dart';
-import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view_model.dart';
-import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
-import 'package:git_viewer/presentation/widgets/code_viewer.dart';
+import 'package:git_viewer/pages/base/base_view.dart';
+import 'package:git_viewer/pages/file_viewer/file_viewer_view_model.dart';
+import 'package:git_viewer/pages/project_viewer/project_viewer_viewmodels.dart';
+import 'package:git_viewer/shared/widgets/code_viewer.dart';
+
 import 'package:provider/provider.dart';
 import 'package:stacked/stacked.dart';
 

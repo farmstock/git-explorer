@@ -2,10 +2,13 @@ import 'package:dartz/dartz.dart';
 import 'package:git_viewer/core/error/failures.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/freezed_data_model/repositories/git_repository.dart';
-import 'package:git_viewer/presentation/pages/base/base_view_model.dart';
+import 'package:git_viewer/pages/base/base_view_model.dart';
+
+import '../../injection_container.dart';
+
 //import 'package:stacked/stacked.dart';
 
-import '../../../injection_container.dart';
+
 
 
 class FileExplorerViewModel extends BaseViewModel{
