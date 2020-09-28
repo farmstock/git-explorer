@@ -1,15 +1,12 @@
 
-import 'dart:convert';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_viewer/core/error/exceptions.dart';
 import 'package:git_viewer/core/error/failures.dart';
 
-import 'package:git_viewer/data_model/models/git_models.dart';
 import 'package:git_viewer/freezed_data_model/datasources/git_data_source.dart';
 import 'package:git_viewer/freezed_data_model/datasources/git_local_data_source.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
-import 'package:git_viewer/freezed_data_model/domain/repositories/git_repository.dart';
 import 'package:git_viewer/freezed_data_model/model/branch_model/branch_model.dart';
 import 'package:git_viewer/freezed_data_model/model/commit_details_model/commit_details_model.dart';
 //import 'package:git_viewer/freezed_data_model/model/git_tree/git_tree_models.dart';
@@ -21,8 +18,17 @@ import 'package:git_viewer/services/shared_prefrences_service/local_storage_util
 
 final String PROJECT_ENTITY_LIST_KEY = 'project_entity_list';
 
+abstract class GitRepository{
+  Future<Either<Failure, List<BranchEntity>>> getAllBranches();
+  Future<Either<Failure, List<TreeNodeEntity>>> getChildNodes(TreeNodeEntity treeNodeEntity);
+  Future<Either<Failure, TreeNodeEntity>> getRootNode(BranchEntity branchEntity);
+  Future<Either<Failure, String>> getRawContent(TreeNodeEntity treeNodeEntity);
+  Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList();
+  Future<Either<Failure, Unit>> saveProjectEntityList(List<ProjectEntity> projectEntityList);
+}
 
-class GitRepositoryImpl {
+
+class GitRepositoryImpl implements GitRepository {
 
   final GitRemoteDataSource gitDataSource;
   final GitLocalDataSource gitLocalDataSource;
@@ -123,7 +129,4 @@ class GitRepositoryImpl {
       return Left(CacheFailure());
     }
   }
-
-
-
 }
