@@ -18,26 +18,26 @@ import 'package:git_viewer/services/shared_prefrences_service/local_storage_util
 
 final String PROJECT_ENTITY_LIST_KEY = 'project_entity_list';
 
-abstract class GitRepository{
-  Future<Either<Failure, List<BranchEntity>>> getAllBranches();
-  Future<Either<Failure, List<TreeNodeEntity>>> getChildNodes(TreeNodeEntity treeNodeEntity);
-  Future<Either<Failure, TreeNodeEntity>> getRootNode(BranchEntity branchEntity);
-  Future<Either<Failure, String>> getRawContent(TreeNodeEntity treeNodeEntity);
-  Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList();
-  Future<Either<Failure, Unit>> saveProjectEntityList(List<ProjectEntity> projectEntityList);
-}
+// abstract class GitRepository{
+//   Future<Either<Failure, List<BranchEntity>>> getAllBranches();
+//   Future<Either<Failure, List<TreeNodeEntity>>> getChildNodes(TreeNodeEntity treeNodeEntity);
+//   Future<Either<Failure, TreeNodeEntity>> getRootNode(BranchEntity branchEntity);
+//   Future<Either<Failure, String>> getRawContent(TreeNodeEntity treeNodeEntity);
+//   Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList();
+//   Future<Either<Failure, Unit>> saveProjectEntityList(List<ProjectEntity> projectEntityList);
+// }
 
 
-class GitRepositoryImpl implements GitRepository {
+class GitRepository  {
 
   final GitRemoteDataSource gitDataSource;
   final GitLocalDataSource gitLocalDataSource;
   final LocalStorageUtil localStorageManager;
 
-  GitRepositoryImpl({@required this.gitDataSource, @required this.localStorageManager, @required this.gitLocalDataSource});
+  GitRepository({@required this.gitDataSource, @required this.localStorageManager, @required this.gitLocalDataSource});
 
 
-  @override
+ 
   Future<Either<Failure, List<BranchEntity>>> getAllBranches() async {
       try{
         List<BranchModel> xl = await gitDataSource.getAllBranches();
@@ -47,7 +47,7 @@ class GitRepositoryImpl implements GitRepository {
       }
   }
 
-  @override
+  
   Future<Either<Failure, List<TreeNodeEntity>>> getChildNodes(TreeNodeEntity treeNodeEntity) async{
     try{
       if(treeNodeEntity.treeNodeList!=null)
@@ -71,7 +71,7 @@ class GitRepositoryImpl implements GitRepository {
 
   }
 
-  @override
+  
   Future<Either<Failure, TreeNodeEntity>> getRootNode(BranchEntity branchEntity) async {
     try{
       CommitDetailModel commitDetailModel = await gitDataSource.getCommitDetail(branchEntity.commitId);
@@ -85,7 +85,7 @@ class GitRepositoryImpl implements GitRepository {
 
   }
 
-  @override
+  
   Future<Either<Failure, String>> getRawContent(TreeNodeEntity treeNodeEntity) async {
     try {
       String contentUrl = gitDataSource.getContentUrl(treeNodeEntity.branch, treeNodeEntity.path);
@@ -101,7 +101,7 @@ class GitRepositoryImpl implements GitRepository {
     }
   }
 
-  //@override
+  
   Future<Either<Failure, List<ProjectEntity>>> getProjectEntityList() async {
     try {
       List<dynamic> list = localStorageManager.getFromDisk(PROJECT_ENTITY_LIST_KEY);
@@ -117,7 +117,7 @@ class GitRepositoryImpl implements GitRepository {
 
   }
 
-  @override
+  
   Future<Either<Failure, Unit>> saveProjectEntityList(List<ProjectEntity> projectEntityList) async {
     try {
       localStorageManager.saveToDisk(key: PROJECT_ENTITY_LIST_KEY,

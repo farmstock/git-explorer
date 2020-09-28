@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:git_viewer/freezed_data_model/repositories/git_repository_impl.dart';
+//import 'package:git_viewer/freezed_data_model/repositories/git_repository_impl.dart';
 
 import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view_model.dart';
 import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view_model.dart';
@@ -11,8 +11,8 @@ import 'package:http/http.dart' as http;
 import 'package:stacked_services/stacked_services.dart';
 import 'freezed_data_model/datasources/git_data_source.dart';
 import 'freezed_data_model/datasources/git_local_data_source.dart';
-import 'freezed_data_model/domain/repositories/git_repository.dart';
-
+import 'freezed_data_model/repositories/git_repository.dart';
+//import 'freezed_data_model/repositories/git_repository_impl.dart';
 
 
 final sl = GetIt.instance;
@@ -35,7 +35,7 @@ Future<void> init() async {
 
   // Repository
   sl.registerLazySingleton<GitRepository>(
-    () => GitRepositoryImpl(
+    () => GitRepository(
       gitDataSource: sl(),
       localStorageManager: sl(),
       gitLocalDataSource: sl(),
