@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:git_viewer/app/injection.dart';
 import 'package:git_viewer/pages/base/base_view_model.dart';
 
 import 'package:provider/provider.dart';
 
-import '../../injection_container.dart';
+
 //import 'package:stacked/stacked.dart';
 
 
@@ -18,7 +19,7 @@ class BaseView<T extends BaseViewModel> extends StatefulWidget {
 }
 
 class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
-  T model = sl<T>();
+  T model = getIt<T>();
 
   @override
   void initState() {

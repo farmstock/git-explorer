@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart' hide Router;
 import 'package:git_viewer/app/router.gr.dart';
-import 'package:git_viewer/injection_container.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import 'app/injection.dart';
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: Router().onGenerateRoute,
-      navigatorKey: sl<NavigationService>().navigatorKey,
+      navigatorKey: getIt<NavigationService>().navigatorKey,
     );
   }
 }

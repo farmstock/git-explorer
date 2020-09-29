@@ -9,7 +9,7 @@ import 'package:git_viewer/services/dialog_manager/home_page_dialog_manager.dart
 import 'package:git_viewer/services/git_api_service/api_git_repository.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-import '../../injection_container.dart';
+
 
 
 class HomeViewModel extends BaseViewModel{
@@ -17,7 +17,7 @@ class HomeViewModel extends BaseViewModel{
   final HomePageDialogService _dialogService = getIt<HomePageDialogService>();
   GitRepository gitRepository = getIt<GitRepository>();
   final NavigationService _navigationService = 
-  sl<NavigationService>();
+  getIt<NavigationService>();
   
 
   List<ProjectEntity> _projectList = [];

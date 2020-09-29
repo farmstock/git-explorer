@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:git_viewer/app/injection.dart';
 import 'package:git_viewer/data_model/dialog_models.dart';
 import 'package:git_viewer/data_model/dialog_models.dart';
 import 'package:git_viewer/shared/widgets/add_git_repo_dialog.dart';
@@ -7,7 +8,7 @@ import 'package:git_viewer/shared/widgets/add_git_repo_dialog.dart';
 
 import 'package:rflutter_alert/rflutter_alert.dart';
 //import 'package:stacked_services/stacked_services.dart';
-import '../../injection_container.dart';
+
 
 
 // Response Model
@@ -52,7 +53,7 @@ class HomePageDialogManager extends StatefulWidget {
 }
 
 class _HomePageDialogManagerState extends State<HomePageDialogManager> {
-  HomePageDialogService _dialogService = sl<HomePageDialogService>();
+  HomePageDialogService _dialogService = getIt<HomePageDialogService>();
 
   @override
   void initState() {
