@@ -7,13 +7,10 @@ import 'package:git_viewer/pages/base/base_view.dart';
 import 'package:git_viewer/pages/file_explorer/file_explorer_view.dart';
 import 'package:git_viewer/pages/file_viewer/file_viewer_view.dart';
 import 'package:git_viewer/pages/project_viewer/project_viewer_viewmodels.dart';
-<<<<<<< HEAD:lib/pages/project_viewer/project_viewer_view.dart
 // import 'package:git_viewer/presentation/pages/base/base_view.dart';
 // import 'package:git_viewer/presentation/pages/file_explorer/file_explorer_view.dart';
 // import 'package:git_viewer/presentation/pages/file_viewer/file_viewer_view.dart';
 // import 'package:git_viewer/presentation/pages/project_viewer/project_viewer_viewmodels.dart';
-=======
->>>>>>> faaa3d924df805d4727781a16ffbacbdcca5bdc9:lib/presentation/pages/project_viewer/project_viewer_view.dart
 import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
 
