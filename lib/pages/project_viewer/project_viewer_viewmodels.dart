@@ -1,3 +1,4 @@
+import 'package:git_viewer/app/injection.dart';
 import 'package:git_viewer/freezed_data_model/datasources/git_data_source.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 
@@ -8,8 +9,8 @@ import '../../injection_container.dart';
 
 
 class BranchViewModel extends BaseViewModel{
-  GitRepository gitRepository = sl<GitRepository>();
-  GitRemoteDataSource gitDataSource = sl<GitRemoteDataSource>();
+  GitRepository gitRepository = getIt<GitRepository>();
+  GitRemoteDataSource gitDataSource = getIt<GitRemoteDataSource>();
 
   List<BranchEntity> _branchList;
   ProjectEntity _projectEntity;
@@ -43,7 +44,7 @@ class BranchViewModel extends BaseViewModel{
 
 class ProjectViewerViewModel extends BaseViewModel{
 
-  GitRepository gitRepository = sl<GitRepository>();
+  GitRepository gitRepository = getIt<GitRepository>();
 
   List<TreeNodeEntity> _nodesInTab;
   TreeNodeEntity _selectedFileNode;

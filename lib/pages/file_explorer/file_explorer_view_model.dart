@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:git_viewer/app/injection.dart';
 import 'package:git_viewer/core/error/failures.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 
@@ -14,7 +15,7 @@ import '../../injection_container.dart';
 
 
 class FileExplorerViewModel extends BaseViewModel{
-  GitRepository gitRepository = sl<GitRepository>();
+  GitRepository gitRepository = getIt<GitRepository>();
   TreeNodeEntity _nodeEntity;
 
   FileExplorerViewModel();

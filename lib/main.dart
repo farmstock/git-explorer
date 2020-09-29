@@ -2,13 +2,16 @@ import 'package:flutter/material.dart' hide Router;
 import 'package:git_viewer/app/router.gr.dart';
 import 'package:git_viewer/injection_container.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'app/locator.dart';
-import 'injection_container.dart' as di;
+
+import 'app/injection.dart';
+
+//import 'injection_container.dart' as di;
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init();
+  //await di.init();
   //setupLocator();
+   await configureInjection('');
   runApp(MyApp());
 }
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:git_viewer/app/locator.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 import 'package:git_viewer/pages/base/base_view.dart';
 import 'package:git_viewer/pages/branch_view_selector/branch_selector_view.dart';

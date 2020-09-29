@@ -1,4 +1,5 @@
-import 'package:git_viewer/app/locator.dart';
+
+import 'package:git_viewer/app/injection.dart';
 import 'package:git_viewer/app/router.gr.dart';
 import 'package:git_viewer/freezed_data_model/domain/entities/git_entities.dart';
 
@@ -13,10 +14,10 @@ import '../../injection_container.dart';
 
 class HomeViewModel extends BaseViewModel{
 
-  final HomePageDialogService _dialogService = sl<HomePageDialogService>();
-  GitRepository gitRepository = locator<GitRepository>();
+  final HomePageDialogService _dialogService = getIt<HomePageDialogService>();
+  GitRepository gitRepository = getIt<GitRepository>();
   final NavigationService _navigationService = 
-  locator<NavigationService>();
+  sl<NavigationService>();
   
 
   List<ProjectEntity> _projectList = [];

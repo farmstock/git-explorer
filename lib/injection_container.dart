@@ -26,40 +26,40 @@ final sl = GetIt.instance;
 Future<void> init() async {
 
   // Manager
-  var instance = await LocalStorageUtil.getInstance();
-  sl.registerSingleton<LocalStorageUtil>(instance);
+  // var instance = await LocalStorageUtil.getInstance();
+  // sl.registerSingleton<LocalStorageUtil>(instance);
 
-  // ViewModels
-  sl.registerFactory(() => BranchViewModel());
-  sl.registerFactory(() => FileViewerViewModel());
-  sl.registerFactory(() => FileExplorerViewModel());
-  sl.registerFactory(() => ProjectViewerViewModel());
-  sl.registerFactory(() => HomeViewModel());
+  // // ViewModels
+  // sl.registerFactory(() => BranchViewModel());
+  // sl.registerFactory(() => FileViewerViewModel());
+  // sl.registerFactory(() => FileExplorerViewModel());
+  // sl.registerFactory(() => ProjectViewerViewModel());
+  // sl.registerFactory(() => HomeViewModel());
 
   // Services
-  sl.registerLazySingleton(() => HomePageDialogService());
+  //sl.registerLazySingleton(() => HomePageDialogService());
 
   // Repository
-  sl.registerLazySingleton<GitRepository>(
-    () => GitRepository(
-      gitDataSource: sl(),
-      localStorageManager: sl(),
-      gitLocalDataSource: sl(),
-    ),
-  );
+  // sl.registerLazySingleton<GitRepository>(
+  //   () => GitRepository(
+  //     gitDataSource: sl(),
+  //     localStorageManager: sl(),
+  //     gitLocalDataSource: sl(),
+  //   ),
+  // );
 
-  // Data sources
-  sl.registerLazySingleton<GitRemoteDataSource>(
-    () => GitRemoteDataSourceImpl(client: sl()),
-  );
+  // // Data sources
+  // sl.registerLazySingleton<GitRemoteDataSource>(
+  //   () => GitRemoteDataSourceImpl(client: sl()),
+  // );
 
-  sl.registerLazySingleton<GitLocalDataSource>(
-        () => GitLocalDataSourceImpl(localStorageUtil: sl()),
-  );
+  // sl.registerLazySingleton<GitLocalDataSource>(
+  //       () => GitLocalDataSourceImpl(localStorageUtil: sl()),
+  // );
 
   //! External
-  sl.registerLazySingleton(() => http.Client());
+  // sl.registerLazySingleton(() => http.Client());
 
-  sl.registerLazySingleton(() => NavigationService());
+  // sl.registerLazySingleton(() => NavigationService());
 
 }
